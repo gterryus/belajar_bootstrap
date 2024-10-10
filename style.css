@@ -1,0 +1,42 @@
+/**
+  Overriding bootstrap style
+*/
+
+@import "./content-style.css";
+
+:root{
+  --navbar-height: 56px;
+  --footer-height: 72px;
+}
+
+html,body{
+  height: 100%;
+}
+body{
+  background: rgb(237, 243, 245);
+}
+.custom-bs-navbar{
+  background: #ffffff;
+  min-height: var(--navbar-height);
+}
+.my-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--footer-height);
+  background: #465564;
+  padding: 24px 24px;
+}
+.my-footer address{
+  color: white;
+  margin: auto;
+}
+
+.content-section{
+  min-height: calc(100% - var(--navbar-height) - var(--footer-height));
+}
+
+.img-gallery{
+  height: 200px;
+}
